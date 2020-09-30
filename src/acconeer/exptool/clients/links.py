@@ -340,11 +340,11 @@ def serial_process_program(port, baud, recv_q, send_q, flow_event, error_event):
         error_event.set()
         flow_event.set()
         sleep(0.1)  # give the main process some time to print log messages
-        log.debug("Exception raised in serial process:\n")
-        log.debug(traceback.print_exc())
-        log.debug("Exception message\n")
+        log.debug("Exception raised in serial process")
+        log.debug(e.__traceback__)
+        log.debug("Exception message")
         log.debug(e.message)
-        log.debug("Exception\n")
+        log.debug("Exception")
         log.debug(e)
         log.debug("\n\n")
 
