@@ -345,7 +345,7 @@ def serial_process_program(port, baud, recv_q, send_q, flow_event, error_event):
         log.debug("Exception exec_info")
         log.debug(e, exc_info=True)
         log.debug("Exception raised in serial process")
-        log.debug(e.__traceback__.print_exc())
+        log.debug(traceback.print_exc())
         log.debug("Exception")
         log.debug(e)
         log.debug("\n\n")
